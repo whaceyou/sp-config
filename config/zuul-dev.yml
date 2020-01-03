@@ -2,12 +2,11 @@ spring:
   application:
     name: zuul
   cloud:
-   config:
-     override-none: true
-    
+    config:
+      override-none: true
+      
 server:
   port: 3001
- 
   
 eureka:
   client:
@@ -16,12 +15,7 @@ eureka:
 
 zuul:
   retryable: true
-  sensitive-headers: 
-
-#  routes:
-#    item-service: /item-service/**
-#    user-service: /user-service/**
-#    order-service: /order-service/**
+    
 ribbon:
   ConnectTimeout: 1000
   ReadTimeout: 1000
@@ -35,3 +29,9 @@ hystrix:
         isolation:
           thread:
             timeoutInMilliseconds: 500
+            
+management:
+  endpoints:
+    web:
+      exposure:
+        include: hystrix.stream
