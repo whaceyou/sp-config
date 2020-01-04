@@ -9,6 +9,7 @@ spring:
     port: 5672
     username: admin
     password: admin
+<<<<<<< HEAD
 
 server:
   port: 3001
@@ -17,6 +18,13 @@ eureka:
   instance:
     prefer-ip-address: true
     instance-id: ${spring.cloud.client.ip-address}:${spring.application.name}:${server.port}
+=======
+      
+server:
+  port: 3001
+  
+eureka:
+>>>>>>> branch 'master' of https://github.com/whaceyou/sp-config
   client:
     service-url:
       defaultZone: http://eureka1:2001/eureka, http://eureka2:2002/eureka
