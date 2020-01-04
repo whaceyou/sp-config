@@ -1,5 +1,4 @@
 spring:
-<<<<<<< HEAD
   application:
     name: order-service
   cloud:
@@ -31,33 +30,3 @@ management:
     web:
       exposure:
         include: hystrix.stream
-        
-=======
-  rabbitmq:
-    host: 192.168.64.140
-    port: 5672
-    username: admin
-    password: admin
-  application:
-    name: order-service
-  cloud:
-   config:
-     override-none: true
-server:
-  port: 8201
-  
-eureka:
-  client:
-    service-url:
-       defaultZone: http://eureka1:2001/eureka,http://eureka2:2002/eureka
-
-feign:
-  hystrix:
-    enabled: true
-
-management:
-  endpoints:
-    web:
-      exposure:
-        include: hystrix.stream
->>>>>>> branch 'master' of https://github.com/whaceyou/sp-config
